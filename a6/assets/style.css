@@ -1,0 +1,18 @@
+h1{
+	font-size: xx-large;
+	font-weight: bolder;
+	color: darkblue;
+}
+
+nav{
+	padding bottom: 50px;
+	margin-right: 750px;
+	background-color: lightgrey;
+	font-style: italic;
+}
+p{
+	font-weight: bold;
+}
+body{
+	background-color: #b6e1fb;
+}

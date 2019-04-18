@@ -1,0 +1,107 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Assignment 6</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+</head>
+ </head>
+  <body>
+    <header>
+      <h1 class="animated jello">Final Project</h1>
+      <div id="coverPhoto">
+  <img src="assets/images/itec.png">
+</div>
+    </header>
+    <nav><p>For the final project, this would have multiple links to the other pages.</p></nav>
+    <div id="intro">
+  <p class="paragraph">For my final project, I will be creating a proposal website to host the 2023 International Tuba-Euphonium Conference at the University of Miami. This organization holds a conference once every two years, and it attracts the most renowed musicians and educators from all around the globe. Since there is much competition for hosting the event, a proposal must be comprehensive and stylish to be considered, and must effectively communicate why the host school and city is best-suited for the task.</p>
+    </div>
+  <div id="list">
+    <button>Click to reveal list of pages</button><br><br>
+    <div id="quick" style="display: none;">
+    <h2>List of Pages</h2>
+    </div>
+    <div id="lessquick" style="display: none;">
+    <ul>
+      <li>Home</li>
+      <li>History</li>
+      <li>Facilities</li>
+      <li>City of Miami</li>
+      <li>Competitions</li>
+    </ul>
+    </div>
+  </div>
+  <div id="pagesDescription">
+    <div class="space">
+    <h2>Page 1: Home</h2>
+    <p class="paragraph">The home page will provide some basic information about the proposed conference, introduce the host(s), and set the stylistic standard for the rest of the site.</p>
+<div id="logo">
+  <button onclick="document.getElementById('forst').src='assets/images/orange.jpg'" style="max-height: 100px" style="max-width: auto">Click here for a newly stylized logo</button>
+
+<img id="forst" src="assets/images/frost.jpg" style="max-height: 100px" style="max-width: auto">
+
+<button onclick="document.getElementById('forst').src='assets/images/frost.jpg'">Click here to return to the original</button>
+</div>
+</div>
+
+ <div class="space">
+    <h2>Page 2: History</h2>
+    <p class="paragraph">Seeing as the 2023 conference will mark the 50th anniversery of the organization, the committee will want to choose a location with significance. This is where the history page comes in. It will contain information about the University's role in the tuba-euphonium community from the 1950s until today. In addition, there will be a short quiz that visitors can take to test their knowledge.</p>
+    <div id="prof"><img src="assets/images/sam.jpg"></div>
+    <button id="quiz" onclick="startquiz()">Click me to take a one-question quiz.</button>
+</div>
+
+ <div class="space">
+    <h2>Page 3: Facilities</h2>
+    <p class="paragraph">The facilities page will detail the venues and buildings in the University (mostly located in the Frost School of Music) that conference events would take place in. </p>
+</div>
+
+ <div class="space">
+    <h2>Page 4: City of Miami</h2>
+    <p class="paragraph">This page will provide information all about the greater Miami area that would be potentially attractive to committee members, including weather, attractions, food, and transportation. This will also include many links to other sites and an interactive chart about Miami's vast public transit system.</p>
+    <div id="airport"><img src="assets/images/airport.jpg"></div>
+    <button id="hide">Hide Picture</button>
+<button id="show">Show Picture</button>
+</div>
+
+ <div class="space">
+    <h2>Page 5: Competitions</h2>
+    <p class="paragraph">One of the hallmarks of every ITEC conference is the many competitions. This page will detail the competitions that would take place at the 2023 conference. It will also contain a calculator that will calculate the cash prizes based on the number of attendees to the conference.</p>
+</div>
+<div id="colorChange">
+  Click here to see what a different overall style would look like.
+</div>
+</div>
+<script type="text/javascript">
+
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#quick").fadeIn();
+    $("#lessquick").fadeIn("slow");
+  });
+});
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("#airport").hide();
+  });
+  $("#show").click(function(){
+    $("#airport").show();
+  });
+});
+quiz.addEventListener("click", function startquiz(){
+  var test = prompt("What instrument is this man holding?");
+  if (test.toLowerCase() === "tuba") {
+    alert("Correct! That's a tuba!")} else {
+    alert("Sorry, try again! Hint: it starts with the letter T")}
+});
+var clrchng = document.getElementById("colorChange");
+
+      clrchng.addEventListener("click", function(){
+          document.body.style.backgroundColor = "#6fd497";
+      });
+</script>
+  </body>
+</html>
